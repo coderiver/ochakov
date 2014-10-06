@@ -47,12 +47,77 @@
 // p
 // 	+jpg(bla)
 
++font(ProximaNova-Regular, ProximaNova-Regular)  
+=reg
+	font-family: "ProximaNova-Regular", Arial, sans-serif 
 
++font(ProximaNova-RegItalic, ProximaNova-RegItalic)  
+=it
+	font-family: "ProximaNova-RegItalic", Arial, sans-serif 
+
++font(ProximaNova-Light, ProximaNova-Light)  
+=light
+	font-family: "ProximaNova-Light", Arial, sans-serif 
+
++font(ProximaNova-Bold, ProximaNova-Bold)  
+=bold
+	font-family: "ProximaNova-Bold", Arial, sans-serif 
+
++font(ProximaNova-SemiBold, ProximaNova-SemiBold)  
+=sbold
+	font-family: "ProximaNova-SemiBold", Arial, sans-serif 
+
++font(ProximaNova-Black, ProximaNova-Black)  
+=black
+	font-family: "ProximaNova-Black", Arial, sans-serif 
+
++font(ProximaNovaCond-Reg, ProximaNovaCond-Reg)  
+=creg
+	font-family: "ProximaNovaCond-Reg", Arial, sans-serif 
+
++font(ProximaNovaCond-SemiBold, ProximaNovaCond-SemiBold)  
+=csbold
+	font-family: "ProximaNovaCond-SemiBold", Arial, sans-serif 
+
++font(rouble, rouble)
+=ruble
+	font-family: "rouble"
+	text-transform: lowercase
+.rub
+	display: inline-block
+	font-style: normal
+	font-weight: normal
+	&:before
+		content: "a"
+		+ruble
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	min-width: 320px
+	+reg
+	font-size: 14px 
 	line-height: 1.4
-
+a
+	&:hover
+		text-decoration: none
+.l-center
+	position: relative
+	margin: 0 auto
+	max-width: 1300px 
+.wrap
+	+clr
+	clear: both
+.wrapper
+	overflow: hidden 
+.out
+	position: relative
+	z-index: 2
+	margin: 0 0 -596px
+	min-height: 100%
+	height: auto !important
+	height: 100%	 
+	overflow: hidden 
+.push
+	clear: both
+	height: 596px
 
 // common blocks      
 
