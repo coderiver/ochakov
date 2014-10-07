@@ -8,4 +8,13 @@ head.ready(function() {
 		var el = $(this).attr("data-toggle");
 		$("."+el).toggleClass("is-active")
 	});
+
+	$('.js-slick').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: false,
+		autoplaySpeed: 5000,
+		dots: true,
+		arrows: false
+	});
 });

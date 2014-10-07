@@ -1,216 +1,41 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.main-slider
+	position: relative
+	z-index: 1
+	margin-top: -146px
+	overflow: hidden
+	max-height: 744px
+	+r(980)
+		margin: 0
+		//height: 402px
+	+r(768)
+		background: $blue 
+	img
+		margin: 0 auto 
+	.slick-dots
+		bottom: 267px
+		+r(980)
+			bottom: 38px
+		+r(768)
+			bottom: 28px
+	&__title
+		position: absolute
+		top: 193px
+		left: 50%
+		margin-left: -490px
+		width: 980px
+		font-size: 46px
+		color: #fff
+		line-height: 1
+		+light 
+		+r(980)
+			left: 0
+			top: 83px
+			margin: 0
+			padding: 0 9.5% 
+			width: 100%
+			font-size: 39px
+		+r(768)
+			top: 62px
+			font-size: 26px
+			padding: 0 20px
+			text-align: center 
