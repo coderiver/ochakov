@@ -4,5 +4,8 @@ head.ready(function() {
 	// 	$(".js-popup").hide();
 	// });
 
-	console.log($('body').html());
+	$(".js-toggle-key").on("click", function(){
+		var el = $(this).attr("data-toggle");
+		$("."+el).toggleClass("is-active")
+	});
 });
