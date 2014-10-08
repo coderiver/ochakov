@@ -105,8 +105,9 @@ $devil: #666
 $dark: #272934
 $gray: #999
 $blue: #007abc
-$blue_h: #016aa2
+$blue_h: #00a8bc
 $border: #e5e5e5
+$yellow: #ff0
 
 body
 	min-width: 320px
@@ -131,16 +132,20 @@ a
 	min-height: 100%
 	height: auto !important
 	height: 100%	 
+	+r(768)
+		margin-bottom: -123px
 .push
 	clear: both
 	height: 286px
+	+r(768)
+		height: 123px
 .icon 
 	+icon
 // common blocks      
 
 .header
 	position: relative
-	z-index: 2
+	z-index: 10
 	margin-top: 23px
 	+r(980)
 		margin-top: 0

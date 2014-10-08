@@ -17,4 +17,35 @@ head.ready(function() {
 		dots: true,
 		arrows: false
 	});
+	$('.js-slick-clients').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		arrows: false,
+		responsive: [
+		    {
+		      breakpoint: 980,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 1
+		      }
+		    },
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 1
+		      }
+		    }
+		  ]
+	});
+
+	$(".js-client-prev").on("click",function(){
+		$('.js-slick-clients').slickPrev();
+	});
+	$(".js-client-next").on("click",function(){
+		$('.js-slick-clients').slickNext();
+	});
 });

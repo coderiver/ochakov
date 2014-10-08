@@ -2,23 +2,26 @@
 	position: relative
 	z-index: 1
 	margin-top: -146px
-	overflow: hidden
 	max-height: 744px
+	min-height: 525px
 	+r(980)
 		margin: 0
-		//height: 402px
+		height: 525px
 	+r(768)
+		height: auto
+		min-height: 120px
 		background: $blue 
 	img
 		margin: 0 auto 
 	.slick-dots
 		bottom: 267px
 		+r(980)
-			bottom: 38px
+			bottom: 201px
 		+r(768)
 			bottom: 28px
 	&__title
 		position: absolute
+		z-index: 2
 		top: 193px
 		left: 50%
 		margin-left: -490px
@@ -39,3 +42,350 @@
 			font-size: 26px
 			padding: 0 20px
 			text-align: center 
+	&__item
+		&:after
+			content: ""
+			display: none
+			position: absolute
+			top: 0
+			right: 0
+			left: 0
+			bottom: 0
+			+g(rgba(#000,.5), rgba(#000,0)) 
+			+r(768)
+				display: block
+
+.menu
+	position: relative
+	z-index: 2
+	+clr 
+	font-size: 14px
+	margin-top: -232px
+	height: 40px
+	line-height: 40px
+	+r(980)
+		margin-top: -120px
+	+r(768)
+		height: auto
+		line-height: 1.2
+		margin-top: -10px
+		text-transform: capitalize
+	li
+		float: left
+		position: relative
+	&__link
+		background: #333
+		+r(768)
+			width: 33.3%
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: -1px
+			margin-top: -8px 
+			height: 16px
+			width: 1px
+			background: #484848 
+		&:first-child
+			&:before
+				display: none
+		&:nth-child(3)
+			padding-right: 24px
+		a
+			color: #fff 
+	&__action
+		background: #fff 
+		&:nth-child(4)
+			+r(768)
+				&:before
+					display: none
+		+r(768)
+			width: 50%
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: -20px
+			+arr(20,40,#fff,tr) 
+			+r(768)
+				top: 50%
+				margin-top: -8px
+				left: 0
+				border: 0
+				width: 1px
+				height: 16px
+				background: #e9e9e9 
+				
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: -20px
+			+arr(40,20,#fff,bl) 
+			+r(980)
+				display: none
+		a
+			color: #000 
+		span
+			color: $blue
+			+r(768)
+				text-transform: lowercase
+		.icon-file
+			display: inline-block
+			position: relative
+			top: 2px
+			margin-right: 7px
+			+s(file)
+		em
+			font-style: normal
+			+r(768)
+				display: none
+	a
+		display: block
+		padding: 0 22px 
+		+tr(color .4s)
+		+r(768)
+			padding: 0
+			height: 40px
+			line-height: 40px
+			text-align: center
+		&:hover
+			color: $blue 
+
+.cat-nav-wrap
+	position: relative
+	margin: 0 0 22px 
+	z-index: 2
+	border-top: 1px solid #fff
+	border-bottom: 1px solid #fff
+	margin-left: -110px
+	width: 1200px
+	+clr
+	background: $blue 
+	+r(1200)
+		width: 100%
+		margin: 0
+	+r(980)
+		border-bottom: 0 
+	+r(768)
+		border-top: 1px solid #fff
+.cat-nav
+	float: left
+	border-left: 1px solid #fff
+	padding: 0 10px 
+	height: 200px
+	//width: 16.5%
+	width: 16.66%
+	background: $blue
+	text-align: center
+	line-height: 1 
+	color: #fff
+	overflow: hidden
+	+tr(background .4s)
+	text-align: center
+	+r(980)
+		display: table 
+		width: 33.3%
+		height: 110px
+		line-height: 110px
+		text-align: left
+		border-bottom: 1px solid #fff
+	+r(768)
+		display: block
+		height: 140px
+		width: 50%
+		line-height: 1
+		text-align: center
+		//border-bottom-color: #bfdeee 
+	&:hover
+		background: $blue_h 
+	&:first-child
+		//width: 17.5%
+		border-left: 0
+		+r(980)
+			width: 33.3%
+		+r(768)
+			width: 50%
+	&:nth-child(4)
+		+r(980)
+			border-left: 0
+		+r(768)
+			border-left: 1px solid #fff 
+	&:nth-child(2n+1)
+		+r(768)
+			border-left: 0
+	&__img
+		display: block
+		height: 112px
+		margin-bottom: -8px
+		line-height: 112px
+		+r(1200)
+			height: 90px
+			margin: 0
+			line-height: 90px
+		+r(980)
+			float: none
+			display: table-cell
+			vertical-align: middle
+			width: 95px
+			height: auto
+			margin: 0
+			line-height: 1
+			text-align: center
+		+r(768)
+			display: block
+			height: 75px
+			width: 100%
+			line-height: 75px
+		img
+			vertical-align: middle
+			+r(980)
+				max-width: 52px
+			+r(768)
+				max-height: 42px
+	&__title
+		display: block
+		margin-bottom: 5px
+		font-size: 16px
+		+csbold
+		line-height: 1
+		+r(980)
+			display: table-cell
+			vertical-align: middle
+		+r(768)
+			display: block
+	&__text
+		display: block
+		opacity: 0.67
+		font-size: 14px
+		+reg
+		line-height: 1
+		+r(980)
+			display: none
+.banners-slider
+	margin: 22px 0 
+	+clr
+.banner
+	float: left
+	position: relative
+	width: 50%
+	height: 190px
+	overflow: hidden
+	&:first-child
+		padding-right: 1px
+	img
+		display: block
+		height: 100%
+		width: auto
+	span
+		display: block
+	&__info
+		position: absolute
+		left: 46px
+		bottom: 37px
+		color: #fff
+		font-size: 18px
+		+sbold 
+	&__title
+		font-size: 38px
+		color: $yellow
+		+light 
+	&__price
+		font-size: 27px
+.post-item-slider
+	background: #005380 
+	padding: 25px 0 
+	.l-center
+		+clr
+.post-item
+	float: left
+	position: relative
+	padding-left: 1px
+	width: 33.3%
+	line-height: 1.2
+	overflow: hidden
+	color: #fff 
+	&:first-child
+		padding-left: 0
+	&__img
+		margin-bottom: 18px
+		height: 129px
+		a
+			display: block
+		img
+			display: block
+			margin: 0 auto 
+			height: auto
+			width: 100%
+	&__title
+		display: inline-block
+		margin: 0 0 24px
+		padding-right: 20px 
+		font-size: 16px
+		color: #fff
+		+csbold
+	&__text
+		padding-right: 20px 
+		font-size: 14px
+		opacity: 0.67
+
+.clients
+	position: relative
+	padding: 0 70px 0 130px
+	&__title
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 0
+		line-height: 100px
+		font-size: 16px
+		+csbold
+		color: $devil 
+	&__nav
+		position: absolute
+		top: 50%
+		right: 0
+		margin-top: -10px
+		button
+			width: 20px
+			position: relative
+			height: 20px
+			background: #fff
+			border-radius: 3px  
+			+tr(background .4s)
+			&:hover
+				background: #b2b2b2 
+				&:after
+					opacity: 1
+				&:before
+					opacity: 0
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				top: 50%
+				left: 50%
+				margin: -3px 0 0 -2px 
+				will-change: opacity
+				+tr(opacity .4s)
+			&:after
+				opacity: 0
+	&__prev
+		&:before
+			+s(prev-small)
+		&:after
+			+s(prev-small-h)
+	&__next
+		&:before 
+			+s(next-small)
+		&:after
+			+s(next-small-h)
+	.slick-slide
+		height: 100px
+		line-height: 100px
+		a
+			display: inline-block
+			width: 100%
+			vertical-align: middle
+		img
+			margin: 0 auto 
