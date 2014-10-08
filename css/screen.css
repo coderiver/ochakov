@@ -244,6 +244,9 @@ a { text-decoration: none; }
 .link-more { display: inline-block; position: relative; padding-right: 14px; color: white; line-height: 1.4; font-size: 12px; font-family: "ProximaNova-SemiBold", Arial, sans-serif; }
 .link-more .icon { position: absolute; top: 0; right: 0; }
 
+.btn-consult { position: fixed; right: 0; top: 23px; padding: 3px 21px 5px 18px; border-radius: 4px 4px 0 0; display: inline-block; background: #e9e9e9; z-index: 90; -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); font-size: 14px; line-height: 1; font-family: "ProximaNova-SemiBold", Arial, sans-serif; color: #333333; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; will-change: transform; -moz-transform-origin: 100% 100%; -ms-transform-origin: 100% 100%; -webkit-transform-origin: 100% 100%; transform-origin: 100% 100%; }
+.btn-consult .icon { margin-right: 8px; font-size: 19px; color: #007abc; }
+
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
