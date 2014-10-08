@@ -4,6 +4,7 @@
 	margin-top: -146px
 	max-height: 744px
 	min-height: 525px
+	overflow: hidden
 	+r(980)
 		margin: 0
 		height: 525px
@@ -22,7 +23,7 @@
 	&__title
 		position: absolute
 		z-index: 2
-		top: 193px
+		top: 188px
 		left: 50%
 		margin-left: -490px
 		width: 980px
@@ -60,7 +61,7 @@
 	z-index: 2
 	+clr 
 	font-size: 14px
-	margin-top: -232px
+	margin-top: -230px
 	height: 40px
 	line-height: 40px
 	+r(980)
@@ -142,7 +143,7 @@
 				display: none
 	a
 		display: block
-		padding: 0 22px 
+		padding: 0 21px 
 		+tr(color .4s)
 		+r(768)
 			padding: 0
@@ -185,7 +186,7 @@
 	text-align: center
 	+r(980)
 		display: table 
-		width: 33.3%
+		width: 33.33%
 		height: 110px
 		line-height: 110px
 		text-align: left
@@ -245,7 +246,7 @@
 				max-height: 42px
 	&__title
 		display: block
-		margin-bottom: 5px
+		margin-bottom: 10px
 		font-size: 16px
 		+csbold
 		line-height: 1
@@ -263,45 +264,89 @@
 		+r(980)
 			display: none
 .banners-slider
-	margin: 22px 0 
 	+clr
-.banner
-	float: left
-	position: relative
-	width: 50%
 	height: 190px
+	+r(980)
+		padding: 0 15px 
+	+r(768)
+		padding: 0
+		height: 142px
+	.slick-slide
+		height: 190px
+		+r(768)
+			padding: 0
+			height: 142px
+		&:first-child
+			.banner
+				padding-left: 0
+.banner
+	position: relative
+	height: 190px
+	display: block
 	overflow: hidden
-	&:first-child
-		padding-right: 1px
+	+r(768)
+		height: 142px
 	img
 		display: block
-		height: 100%
 		width: auto
+		height: 100%
+		+r(768)
+			height: auto
+			width: 100%
+		+r(480)
+			height: 100%
+			width: auto
 	span
 		display: block
 	&__info
 		position: absolute
 		left: 46px
+		right: 10px
 		bottom: 37px
 		color: #fff
 		font-size: 18px
 		+sbold 
+		+r(768)
+			bottom: 18px
+			left: 30px
+			font-size: 16px
 	&__title
+		margin-bottom: 9px
 		font-size: 38px
 		color: $yellow
 		+light 
+		line-height: 1.2
+		+r(768)
+			margin-bottom: 0
+			font-size: 34px
 	&__price
 		font-size: 27px
+		+r(768)
+			font-size: 24px
 .post-item-slider
+	position: relative
 	background: #005380 
-	padding: 25px 0 
+	padding: 25px 0 31px
+	+r(980)
+		padding: 25px 15px 31px
+	+r(640)
+		padding-bottom: 50px
 	.l-center
 		+clr
+	.slick-dots
+		height: 38px
+		line-height: 38px
+		bottom: -50px
+		left: -15px
+		right: -15px
+		background: rgba(#000,.15) 
+		li
+			vertical-align: middle
 .post-item
-	float: left
+	//float: left
 	position: relative
-	padding-left: 1px
-	width: 33.3%
+	//padding-left: 1px
+	//width: 33.3%
 	line-height: 1.2
 	overflow: hidden
 	color: #fff 
@@ -310,13 +355,18 @@
 	&__img
 		margin-bottom: 18px
 		height: 129px
+		+r(980)
+			height: auto
 		a
 			display: block
 		img
 			display: block
 			margin: 0 auto 
-			height: auto
-			width: 100%
+			width: auto
+			height: 100%
+			+r(980)
+				height: auto
+				width: 100%
 	&__title
 		display: inline-block
 		margin: 0 0 24px
@@ -332,6 +382,8 @@
 .clients
 	position: relative
 	padding: 0 70px 0 130px
+	+r(768)
+		padding: 20px 0 0
 	&__title
 		position: absolute
 		left: 0
@@ -341,11 +393,26 @@
 		font-size: 16px
 		+csbold
 		color: $devil 
+		+r(980)
+			left: 15px
+		+r(768)
+			position: static
+			float: left
+			padding-left: 20px
+			height: auto
+			line-height: 1
 	&__nav
 		position: absolute
 		top: 50%
 		right: 0
 		margin-top: -10px
+		+r(980)
+			right: 15px
+		+r(768)
+			position: static
+			padding-right: 20px
+			float: right
+			margin: 0
 		button
 			width: 20px
 			position: relative
@@ -380,6 +447,8 @@
 			+s(next-small)
 		&:after
 			+s(next-small-h)
+	.slick-slider
+		clear: both
 	.slick-slide
 		height: 100px
 		line-height: 100px
