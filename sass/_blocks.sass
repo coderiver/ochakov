@@ -45,7 +45,8 @@
 .drop-list
 	position: relative
 	&__text
-		display: block
+		display: inline-block
+		position: relative
 		padding: 0 14px 0 23px
 		height: 40px
 		line-height: 40px
@@ -57,6 +58,12 @@
 		white-space: nowrap
 		cursor: pointer
 		+nosel
+		&:after
+			content: ""
+			position: absolute
+			top: 19px
+			right: 0
+			+arr(6,3,#000,b) 
 	.icon
 		position: absolute
 		left: 0

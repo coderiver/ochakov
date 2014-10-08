@@ -234,7 +234,8 @@ a { text-decoration: none; }
 .input:focus { background: white; }
 
 .drop-list { position: relative; }
-.drop-list__text { display: block; padding: 0 14px 0 23px; height: 40px; line-height: 40px; overflow: hidden; font-size: 14px; font-family: "proxima-nova-condensed"; color: black; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.drop-list__text { display: inline-block; position: relative; padding: 0 14px 0 23px; height: 40px; line-height: 40px; overflow: hidden; font-size: 14px; font-family: "proxima-nova-condensed"; color: black; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.drop-list__text:after { content: ""; position: absolute; top: 19px; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 3px 3px 0 3px; border-color: black transparent transparent transparent; }
 .drop-list .icon { position: absolute; left: 0; top: 5px; font-size: 19px; color: #007abc; }
 .drop-list__main { position: absolute; top: 100%; left: 0; font-family: "proxima-nova-condensed"; display: none; border-radius: 4px; background: #f1f2f5; overflow: hidden; }
 .drop-list__main a { display: block; padding: 5px 23px; color: black; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
