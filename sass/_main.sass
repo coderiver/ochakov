@@ -413,40 +413,6 @@
 			padding-right: 20px
 			float: right
 			margin: 0
-		button
-			width: 20px
-			position: relative
-			height: 20px
-			background: #fff
-			border-radius: 3px  
-			+tr(background .4s)
-			&:hover
-				background: #b2b2b2 
-				&:after
-					opacity: 1
-				&:before
-					opacity: 0
-			&:before,
-			&:after
-				content: ""
-				position: absolute
-				top: 50%
-				left: 50%
-				margin: -3px 0 0 -2px 
-				will-change: opacity
-				+tr(opacity .4s)
-			&:after
-				opacity: 0
-	&__prev
-		&:before
-			+s(prev-small)
-		&:after
-			+s(prev-small-h)
-	&__next
-		&:before 
-			+s(next-small)
-		&:after
-			+s(next-small-h)
 	.slick-slider
 		clear: both
 	.slick-slide

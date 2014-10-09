@@ -26,3 +26,208 @@
 	.btn
 		padding: 5px 32px 4px 
 		font-size: 14px
+.sidebar
+	padding: 24px 20px
+	&__title
+		margin-bottom: 22px
+		font-size: 16px
+		color: $gray_d
+		+csbold
+.sidebar__nav
+	li
+		&:first-child
+			a
+				border-top: 1px solid $border 
+		&.is-active
+			a
+				color: $blue 
+	a
+		display: block
+		padding: 12px 0
+		border-bottom: 1px solid $border 
+		color: $devil
+		font-size: 14px
+		+reg 
+		+tr(color .4s)
+		&:hover
+			color: $blue 
+.article
+	padding: 0 35px 20px 0
+	line-height: 1.4
+	font-size: 16px
+	+reg
+	color: $devil 
+	+r(980)
+		padding-right: 0
+	h1,h2,h3,h4,h5,h6
+		font-weight: normal
+		+sbold
+		color: #000 
+	h1
+		margin: 0 0 3px 
+		font-size: 38px
+		color: $gray_d
+		+light 
+		+ strong
+			color: $blue
+			font-size: 17px
+			+sbold 
+	h2
+		margin: 20px 0 4px 
+		font-size: 20px
+	h3
+		font-size: 19px
+	h4
+		font-size: 18px
+	h5
+		font-size: 17px
+	h6
+		font-size: 16px
+	strong,
+	b
+		+sbold
+	em,
+	i
+		+it
+	p
+		margin: 0 0 23px
+		a
+			display: inline-block
+			border-bottom: 2px solid rgba($blue,.18) 
+			color: #000
+			+tr(color .4s)
+			&:hover
+				color: $blue_h 
+	.slider
+		margin: 16px 0 22px -25px
+		+r(980)
+			margin: 16px 0
+		&__main,
+		&__meta
+			width: 695px
+			+r(980)
+				width: 100%
+		&__meta
+			padding: 0 55px 0 25px
+			+r(980)
+				padding-left: 0
+		img
+			height: auto
+			width: 100%
+	blockquote
+		margin: 18px 0
+		border-top: 2px solid #f0f0f0 
+		border-bottom: 2px solid #f0f0f0 
+		padding: 24px 0 20px
+		color: #000
+		line-height: 1.2
+		img
+			float: left
+			margin: 0
+		div
+			position: relative
+			padding: 11px 20px 0 30px
+			overflow: hidden
+			font-size: 20px
+			&:before
+				content: "“" 
+				position: absolute
+				left: 0
+				top: -10px
+				color: $blue
+				+reg
+				font-size: 64px 
+		p
+			position: relative
+			margin-bottom: 27px
+			&:after
+				content: ""
+				position: absolute
+				bottom: -10px
+				left: 0
+				width: 45px 
+				height: 3px
+				background: $blue
+		strong
+			display: block
+			margin: 0 0 -6px 
+			font-size: 14px
+			+sbold
+		span
+			color: $gray 
+			font-size: 14px
+	img
+		max-width: 100%
+		height: auto
+		&[align="left"]
+			margin: 0 30px 23px 0
+			+r(768)	
+				margin: 23px auto 
+		&[align="right"]
+			margin: 0 0 23px 30px
+			+r(768)	
+				margin: 23px auto 
+		+r(768)	
+			float: none
+			display: block
+			
+				
+.slider
+	&__main
+		margin-bottom: 7px
+	&__meta
+		position: relative
+		+clr
+	&__counter
+		display: inline-block
+		margin-right: 20px
+		color: $blue
+		font-size: 12px
+		+sbold
+	&__label
+		font-size: 14px
+		color: $gray 
+	&__nav
+		position: absolute
+		top: 0
+		right: 0
+.carousel
+	margin: 0 0 22px 
+	&__head
+		margin-bottom: 12px
+		+clr
+	&__title
+		float: left
+		margin-right: 100px
+		font-size: 20px
+		+sbold
+	&__nav
+		float: right
+		margin-right: -62px
+		+r(980)
+			margin-right: 0
+	.slick-slide
+		text-align: center
+		a
+			display: block
+			color: $devil
+			font-size: 14px
+			line-height: 1 
+			letter-spacing: 0.1px 
+			&:hover
+				span
+					opacity: 1
+				img
+					opacity: 1
+					+gray-zero
+		span
+			opacity: 0
+			will-change: opacity
+			+tr(opacity .4s)
+		img
+			+gray
+			margin: 0 auto 18px
+			opacity: 0.4
+			+transition(opacity .4s, filter .4s)
+			will-change: opacity, filter
+

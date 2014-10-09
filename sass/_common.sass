@@ -104,6 +104,7 @@
 $devil: #666
 $dark: #272934
 $gray: #999
+$gray_d: #333
 $blue: #007abc
 $blue_h: #00a8bc
 $border: #e5e5e5
@@ -116,10 +117,19 @@ body
 	line-height: 1.4
 	color: $gray 
 	background: #e9e9e9 
+	+selection
+		background: rgba($blue_h, .2) 
 	.index-page
 		.header
+			+r(980)
+				margin-bottom: 0
 			.l-center
 				border: 0
+		.header__contacts
+			span
+				color: $devil 
+				+r(980)
+					color: $gray
 a
 	text-decoration: none
 .l-center 
@@ -154,8 +164,8 @@ a
 	z-index: -1
 	background-position: 50% 0 
 	background-repeat: no-repeat 
-	+r(768)
-		display: none
+	// +r(768)
+	// 	display: none
 // common blocks      
 
 .header
@@ -163,7 +173,7 @@ a
 	z-index: 10
 	margin-top: 23px
 	+r(980)
-		margin-top: 0
+		margin: 0 0 36px
 	+r(768)
 		height: 108px
 	.l-center
@@ -258,11 +268,9 @@ a
 	span
 		display: inline-block
 		margin-right: 7px
-		color: $devil
+		color: #fff
 		font-size: 14px
 		+creg
-		+r(980)
-			color: #999 
 	strong
 		display: inline-block
 		font-weight: normal
@@ -441,6 +449,7 @@ a
 		visibility: hidden
 		+tr(transform .5s)
 		will-change: transform
+		border-bottom: 1px solid $border 
 		&.is-active
 			+transform(translateY(0))
 			visibility: visible
@@ -506,6 +515,9 @@ a
 					opacity: 1
 					display: block
 					visibility: visible
+				.is-active
+					a
+						color: $blue 
 				a
 					color: #fff 
 					+r(980)
@@ -566,6 +578,9 @@ a
 			&:first-child
 				a
 					border: 0
+			&.is-active
+				a
+					color: $blue 
 		a
 			display: block
 			border-top: 1px solid #484848 
