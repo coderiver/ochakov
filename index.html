@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<meta name="viewport" content="initial-scale=1, user-scalable=no">
-	<!-- <link rel="stylesheet" media="all" href="css/screen.css" > -->
+	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body class="index-page">
@@ -382,16 +382,5 @@
 </a>
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
-<script>
-    var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = 'css/screen.css';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-    };
-    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
-</script>
 </body>
 </html>
