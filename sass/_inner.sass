@@ -51,6 +51,18 @@
 		+tr(color .4s)
 		&:hover
 			color: $blue 
+.page-head
+	+clr
+.title
+	margin: 0 0 3px 
+	font-weight: normal
+	font-size: 38px
+	color: $gray_d
+	+light 
+	+ strong
+		color: $blue
+		font-size: 17px
+		+sbold 
 .article
 	padding: 0 35px 20px 0
 	line-height: 1.4
@@ -231,3 +243,16 @@
 			+transition(opacity .4s, filter .4s)
 			will-change: opacity, filter
 
+.form
+	padding: 0 0 30px 
+	&__action
+		margin-top: 28px
+	.field
+		width: 310px
+		+r(768)
+			width: 100%
+	.btn
+		+r(768)
+			display: block
+			text-align: center
+			width: 100%
