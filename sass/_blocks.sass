@@ -149,10 +149,15 @@
 	line-height: 1.4
 	font-size: 12px
 	+sbold 
+	+tr(color .2s)
+	&:hover
+		color: $blue 
 	.icon
 		position: absolute
-		top: 0
+		top: -1px
 		right: 0
+.link-more_dark
+	color: #000 
 .btn-consult
 	position: fixed
 	right: 0
@@ -234,4 +239,66 @@
 			position: absolute
 			right: -7px
 			top: 5px
-			
+.date
+	display: block
+	color: $gray
+	font-size: 12px
+	+reg 
+.title
+	+ .date
+		margin: 13px 0 
+.load-more
+	position: relative
+	height: 40px
+	a
+		position: absolute
+		left: -45px
+		right: -45px
+		padding: 6px 0 11px
+		line-height: 1 
+		color: #fff
+		+sbold
+		background: #005380 
+		+tr(background .4s)
+		text-align: center
+		&:hover
+			background: $blue 
+		+r(980)
+			left: -20px
+			right: -20px
+	.icon
+		font-size: 21px
+		position: relative
+		top: 2px
+.link-back
+	margin: 0 0 15px 
+	border-bottom: 1px solid $border 
+	padding-bottom: 13px
+	a
+		position: relative
+		padding: 5px 0 0 17px
+		display: inline-block
+		color: $devil
+		font-size: 12px
+		+sbold 
+		+tr(color .4s)
+		&:hover
+			color: $blue 
+			&:before
+				opacity: 0
+			&:after
+				opacity: 1
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 7px
+			left: 0 
+			+tr(opacity .4s)
+			will-change: opacity
+		&:before
+			opacity: 0.8
+			+s(back)
+		&:after
+			+s(back-h)
+			opacity: 0
