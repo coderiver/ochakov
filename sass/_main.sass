@@ -2,9 +2,9 @@
 	position: relative
 	z-index: 1
 	margin-top: -146px
-	max-height: 744px
 	min-height: 525px
 	overflow: hidden
+	max-height: 744px
 	+r(980)
 		margin: 0
 		height: 525px
@@ -44,6 +44,11 @@
 			padding: 0 20px
 			text-align: center 
 	&__item
+		max-height: 744px
+		img
+			+transform(translateY(-25%))
+			+r(900)
+				+transform(translateY(0))
 		&:after
 			content: ""
 			display: none
