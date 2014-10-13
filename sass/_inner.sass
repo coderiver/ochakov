@@ -410,7 +410,7 @@
 		margin: 12px 0 
 .table-wrap
 	position: relative
-	margin: 20px 0 7px 
+	margin: 20px 0 40px 
 	+r(980)
 		&:after
 			content: ""
@@ -430,6 +430,7 @@
 	position: relative
 	font-size: 14px
 	color: $gray_d
+	width: 648px
 	+reg 
 	thead,tfoot
 		text-align: left
@@ -478,35 +479,6 @@
 				.table__total
 					.icon
 						right: -8px
-
-				
-
-	tfoot
-		td
-			border: 0
-			&:first-child
-				border-left: 1px solid #eee
-			&:last-child
-				border-right: 1px solid #eee  
-	&__prod
-		white-space: nowrap
-		span, a
-			display: inline-block
-			vertical-align: top
-			white-space: normal
-			+tr(color .4s)
-		span
-			font-size: 14px
-		a
-			&:hover
-				color: $blue 
-	&__img
-		width: 80px
-		text-align: center
-	&__title
-		width: 120px
-		color: #000
-		+csbold 
 	&__total,
 	&__mass
 		white-space: nowrap
@@ -552,11 +524,67 @@
 		color: $devil 
 		td
 			padding: 8px 14px 
+			border: 0
 			&:nth-child(2)
 				padding-left: 0
 				text-align: right
 				padding-right: 5px
-
+			&:first-child
+				border-left: 1px solid #eee
+			&:last-child
+				border-right: 1px solid #eee  
+.table_orders
+	tfoot
+		td
+			padding: 0
+			border: 0
+			border-top: 2px solid #eee
+	.table__prod
+		padding: 10px 0 
+		border-bottom: 1px solid #eee 
 .table-action
 	text-align: right
-	padding-bottom: 52px 
+	padding-top: 10px
+.prod
+	white-space: nowrap
+	border-top: 1px solid #f0f0f0 
+	padding: 10px 0 
+	&:first-child
+		border-top: 0
+		padding-top: 0
+	+clr
+	span, a
+		display: inline-block
+		vertical-align: top
+		white-space: normal
+		+tr(color .4s)
+	span
+		font-size: 14px
+	a
+		&:hover
+			color: $blue 
+	&__media
+		float: left
+	&__main
+		overflow: hidden
+	&__img
+		width: 80px
+		text-align: center
+	&__title
+		width: 120px
+		color: #000
+		+csbold 
+	&__meta
+		font-size: 12px
+		color: $gray 
+		ul
+			span
+				color: #000
+				font-size: 12px
+				vertical-align: baseline 
+	&__price
+		margin: 10px 0 
+		font-size: 14px 
+		span
+			color: $blue
+			+sbold
