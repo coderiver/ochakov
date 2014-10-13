@@ -225,6 +225,50 @@
 					top: 0
 					counter-increment: list2
 					content: counter(list1) "." counter(list2) ". "
+	.video
+		margin-left: -25px
+		width: 696px
+		+r(980)
+			width: 100%
+			margin-left: 0
+		&__title
+			margin-left: 25px
+.video
+	position: relative
+	margin: 15px 0 
+	overflow: hidden
+	img
+		display: block
+	&__player
+		position: relative
+		&:before
+			content: "" 
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background: rgba($gray_d, .49)  
+
+	&__play
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -40px 0 0 -40px
+		+s(play)
+	&__title
+		position: relative
+		margin: 10px 0 
+		padding-left: 18px
+		font-size: 14px
+		color: $gray
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 5px
+			+arr(4,8,$blue,r) 
+		 
 .slider
 	&__main
 		margin-bottom: 7px
