@@ -185,18 +185,18 @@
 	ul
 		margin: 18px 0
 		line-height: 1.2
+		+column-count(2) 
 		li
 			position: relative
 			margin-bottom: 5px
-			padding-left: 30px
+			padding-left: 40px
 			&:before
 				content: "" 
 				position: absolute
-				left: 10px
+				left: 20px
 				top: 6px
-				width: 4px
-				border-radius: 50% 
-				height: 4px
+				width: 5px
+				height: 5px
 				background: $blue 
 	ol
 		margin: 18px 0
@@ -204,15 +204,17 @@
 		li
 			position: relative
 			margin-bottom: 5px
-			padding-left: 30px
+			padding-left: 40px
 			&:before
 				content: ""
 				position: absolute
-				top: 0
-				left: 10px 
+				top: 2px
+				left: 20px 
 				counter-increment: list1 
 				content: counter(list1) ". "
 				color: $blue 
+				font-size: 14px
+				+csbold
 			ol
 				margin: 10px
 				counter-reset: list2
@@ -225,6 +227,33 @@
 					top: 0
 					counter-increment: list2
 					content: counter(list1) "." counter(list2) ". "
+	table
+		font-size: 14px
+		color: $devil 
+		border: 1px solid #eee
+		th,td
+			border-right: 1px solid #eee 
+			vertical-align: top
+			&:first-child
+				border-left: 1px solid #eee 
+		th
+			padding: 7px 15px 
+			font-size: 12px
+			font-weight: normal
+			background: #f5f5f5 
+		td
+			padding: 11px 15px 
+		tr
+			&:nth-child(2n)
+				background: #f5f5f5 
+		a
+			display: inline-block
+			border-bottom: 2px solid rgba($blue,.18) 
+			color: #000
+			+transition(color .4s, border .4s)
+			&:hover
+				color: $blue_h 
+				border-bottom: 2px solid rgba($blue_h,1) 
 	.video
 		margin-left: -25px
 		width: 696px
@@ -233,12 +262,32 @@
 			margin-left: 0
 		&__title
 			margin-left: 25px
+.table-scroll
+	margin: 20px 0 
+	position: relative
+	+r(980)
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			width: 10px
+			z-index: 2
+			+gh(rgba(#fff,0), rgba(#fff,1)) 
+	&__in
+		padding: 0 0 10px
+		overflow-x: auto
+		overflow-y: hidden
 .video
 	position: relative
-	margin: 15px 0 
+	margin: 15px 0
 	overflow: hidden
-	img
+	img,
+	iframe
 		display: block
+		width: 100%
+		height: auto 
 	&__player
 		position: relative
 		&:before

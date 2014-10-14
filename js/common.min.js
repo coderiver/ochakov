@@ -8,7 +8,8 @@ head.ready(function() {
 
 	$(".js-toggle-key").on("click", function(){
 		var el = $(this).attr("data-toggle");
-		$("."+el).toggleClass("is-active")
+		$("."+el).toggleClass("is-active");
+		$("html").toggleClass("has-active-nav");
 	});
 
 	$('.js-slick').slick({
