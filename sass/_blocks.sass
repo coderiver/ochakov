@@ -42,7 +42,7 @@
 .field
 	display: block
 	position: relative
-	margin: 0 0 17px 
+	margin: 0 0 24px 
 	&.has-icon
 		.input
 			padding-left: 35px
@@ -81,6 +81,17 @@
 .field_email
 	.icon
 		font-size: 20px
+.field_row
+	font-size: 0
+	.field__title
+		display: inline-block
+		vertical-align: middle
+		padding-right: 20px
+		width: 26%
+		font-size: 12px
+	.field__body
+		display: inline-block
+		width: 74%
 .input
 	display: block
 	padding: 0 10px 
@@ -93,10 +104,67 @@
 	background: #f9f9fb 
 	+tr(background .4s)
 	box-shadow: inset 1px 1px 3px rgba(0,0,0,.14)
-
 	&:focus
 		background: #fff 
-
+	&_textarea
+		padding: 5px 10px
+		min-height: 74px
+		resize: vertical 
+		border: 0
+.radio-wrap
+	font-size: 0
+	border-top: 1px solid #e5e5e5 
+	border-bottom: 1px solid #e5e5e5 
+	padding: 19px 0 
+.radio
+	display: inline-block
+	vertical-align: middle
+	width: 50%
+	position: relative
+	cursor: pointer
+	white-space: nowrap
+	font-size: 0
+	input
+		position: absolute
+		left: 0
+		top: 2px
+		z-index: 2
+		width: 14px
+		height: 14px
+		opacity: 0
+		&:checked
+			+ span
+				&:after
+					display: block
+	span  
+		display: block
+		position: relative
+		margin: 0
+		font-size: 16px
+		color: $devil 
+		white-space: normal
+		padding-left: 25px
+		&:before
+			content: "" 
+			position: absolute
+			left: 0
+			top: 2px
+			width: 16px
+			height: 16px
+			border: 1px solid #bac0c7
+			background: #fff
+			border-radius: 50%
+			box-shadow: 0 1px 1px rgba(#000,.1)
+		&:after
+			content: ""
+			display: none 
+			position: absolute
+			top: 7px
+			left: 5px
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background: $blue
 .drop-list
 	position: relative
 	&__text
