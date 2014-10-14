@@ -113,6 +113,39 @@ $yellow: #ff0
 	overflow: hidden
 	body
 		overflow: hidden
+.has-fixed-header
+	.header
+		margin-bottom: 83px
+		+r(980)
+			margin: 0 0 36px
+	.header__main 
+		position: fixed
+		top: 0
+		left: 50%
+		width: 980px
+		margin-left: -490px
+		border-bottom: 1px solid $border 
+	.shop-nav
+		margin-bottom: 102px
+	.shop-nav__in
+		position: fixed
+		top: 83px
+		left: 50%
+		width: 980px
+		margin-left: -490px
+	.cat-nav-wrap_mod
+		.cat-nav
+			height: 55px
+			line-height: 55px
+		.cat-nav__img,
+		.cat-nav__text
+			display: none
+		.cat-nav__title
+			display: inline-block
+			margin-bottom: 0
+			vertical-align: middle
+
+
 body
 	min-width: 320px
 	+reg
@@ -193,6 +226,7 @@ a
 	overflow: hidden
 	+r(980)
 		position: fixed
+		top: 0
 		left: 0
 		right: 0
 		padding: 0 290px 0 238px
@@ -250,6 +284,7 @@ a
 		position: static
 		padding: 0 
 		height: 0
+		margin: 0
 .header__logo
 	float: left
 	margin: 13px 0

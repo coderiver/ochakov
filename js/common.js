@@ -245,4 +245,22 @@ head.ready(function() {
     	console.log(trCounter);
 		return false;
 	});
+
+	function fixedHeader() {
+		var top = $(".header__top").outerHeight() + 23;
+		if ($(document).scrollTop() >= top) {
+			$("html").addClass("has-fixed-header");
+		}
+		else {
+			$("html").removeClass("has-fixed-header");
+		}
+	}
+	if ($(window).width() > 963) {
+		fixedHeader();
+	}
+	$(window).scroll(function(){
+		if ($(window).width() > 963) {
+			fixedHeader();
+		}
+	});
 });
