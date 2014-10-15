@@ -1,10 +1,28 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	$(document).on("click", function(){
+        $(".js-overlay").fadeOut(400);
+        $("html").removeClass("has-open-popup");
+	});
 	
+	// popups 
+    $(".js-popup-link").on("click", function(event){
+        var popup = $(this).attr("href");
+        $("html").addClass("has-open-popup");
+        $('[data-popup="'+popup+'"]').fadeIn(400);
+        event.stopPropagation();
+        return false; 
+    });
 
+    $(".js-popup-close").on("click", function(){
+        $(".js-overlay").fadeOut(400);
+        $("html").removeClass("has-open-popup");
+        return false;
+    });
+    $(".js-popup").on("click", function(event){
+        event.stopPropagation();
+    });
+    
 
 	$(".js-toggle-key").on("click", function(){
 		var el = $(this).attr("data-toggle");
@@ -246,6 +264,11 @@ head.ready(function() {
 		return false;
 	});
 
+    $(".js-file-btn button").on("click",function(){
+    	$(this).parent().find("input").trigger("click");
+		return false;
+	});
+
 	function fixedHeader() {
 		var top = $(".header__top").outerHeight() + 23;
 		if ($(document).scrollTop() >= top) {
@@ -263,4 +286,24 @@ head.ready(function() {
 			fixedHeader();
 		}
 	});
+
+	function tab() {
+       $(".js-tab").each(function(){
+        	var tab_link = $(this).find("a");
+        	var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
+        	tab_cont.hide();
+            var id_active = $(this).find(".is-active a").attr("href");
+        	$("."+id_active).show();
+        	$(this).parents(".js-tab-group").find(".js-tab1").show();
+        	$(".js-tab a").on("click", function() {
+            	var index = $(this).attr("href");
+            	$(this).parents(".js-tab").find("li").removeClass("is-active");
+            	$(this).parent().addClass("is-active");
+            	$(this).parents(".js-tab-group").find(".js-tab-cont").hide();
+            	$(this).parents(".js-tab-group").find("."+index).show();
+            	return false;
+          	});
+       });
+  	}
+  	tab();
 });

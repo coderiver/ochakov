@@ -109,10 +109,15 @@ $blue: #007abc
 $blue_h: #00a8bc
 $border: #e5e5e5
 $yellow: #ff0
-.has-active-nav
+.has-active-nav,
+.has-open-popup
 	overflow: hidden
 	body
 		overflow: hidden
+.has-open-popup
+	padding-right: 17px
+	+r(980)
+		padding-right: 0
 .has-fixed-header
 	.header
 		margin-bottom: 83px
@@ -259,6 +264,7 @@ a
 			display: none
 	.header__logo
 		display: none
+		margin: 13px 0 0
 		+r(980)
 			display: block
 			position: absolute
@@ -289,6 +295,8 @@ a
 	float: left
 	margin: 13px 0
 	+hide-text
+	+r(980)
+		display: none
 	img
 		display: block
 		width: 100%

@@ -1,0 +1,93 @@
+.has-open-popup
+	overflow: hidden
+	padding-right: 17px
+	+r(980)
+		padding-right: 0
+.overlay
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	z-index: 100
+	padding: 20px 
+	background: #000
+	background: rgba(#111,.6) 
+	+vertical
+	overflow-y: auto
+	will-change: opacity
+.popup
+	display: inline-block
+	position: relative
+	vertical-align: middle
+	padding: 27px 35px 40px
+	text-align: left
+	width: 380px
+	+box
+	background: #fff
+	font-size: 14px
+	+r(640)
+		width: 100%
+		padding: 20px
+	
+	&__title
+		margin: 0 0 21px 
+		font-size: 16px
+		+csbold
+		color: $gray_d 
+	&__btn
+		margin-top: 23px
+		.btn
+			min-width: 100px
+			text-align: center
+	&__close
+		position: absolute
+		top: 0
+		right: 0
+		width: 35px
+		height: 35px
+		background: none
+		&:hover
+			.icon
+				color: $blue 
+		.icon
+			font-size: 25px
+			color: #ccc 
+			+tr(color .4s)
+		&:active
+			top: 1px
+	&__main-title
+		margin: -5px 0 18px
+		color: $gray_d
+		font-size: 30px
+		+light
+	&__subtitle
+		margin-bottom: 6px
+		font-size: 16px
+		color: $blue
+		+csbold
+	&__text
+		font-size: 14px
+		color: $gray_d
+		strong
+			+sbold 
+			font-weight: normal
+		a
+			display: inline-block
+			border-bottom: 2px solid rgba($blue,.18) 
+			color: #000
+			+transition(color .4s, border .4s)
+			&:hover
+				color: $blue_h 
+				border-bottom: 2px solid rgba($blue_h,1) 
+	.btn_height
+		padding: 13px 18px 12px 
+		min-width: 120px
+	&.to-center
+		padding-left: 30px
+		padding-right: 30px
+		text-align: center
+		.btn
+			width: 156px
+			text-align: center
