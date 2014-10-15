@@ -33,6 +33,9 @@
 		font-size: 16px
 		color: $gray_d
 		+csbold
+		&.is-mod
+			margin: 20px 0 5px
+			color: $devil
 .sidebar__nav
 	li
 		&:first-child
@@ -51,8 +54,40 @@
 		+tr(color .4s)
 		&:hover
 			color: $blue 
+.sidebar__menu
+	margin: 0 0 30px 
+	a
+		display: block
+		position: relative
+		margin: 0 0 -1px 
+		border-top: 1px solid #e9e9e9 
+		border-bottom: 1px solid #e9e9e9 
+		padding: 11px 25px 11px 0
+		color: $devil
+		font-size: 14px
+		+reg
+		+tr(color .4s)
+		&:hover
+			color: $blue 
+			&:after
+				color: $blue 
+		&:after
+			content: "Ë"
+			position: absolute
+			top: 17px
+			right: 0
+			+icon
+			font-size: 12px
+			color: $gray  
+			line-height: 1
+			+tr(color .4s)
 .page-head
 	+clr
+.page-head_catalog
+	background: #efefef
+	.breadcrumbs
+		padding: 7px 20px
+		
 .title
 	margin: 0 0 3px 
 	font-weight: normal
@@ -703,6 +738,7 @@
 	white-space: nowrap
 	border-top: 1px solid #f0f0f0 
 	padding: 10px 0 
+	background: #fff 
 	&:first-child
 		border-top: 0
 		padding-top: 0
@@ -742,7 +778,19 @@
 		span
 			color: $blue
 			+sbold
-
+.prod_view
+	white-space: normal
+	padding: 12px 5px 5px 0
+	&:first-child
+		padding: 12px 5px 5px 0
+		border-top: 0
+	.prod__media
+		width: 85px
+	.prod__title
+		width: 100%
+		display: block
+.prod-wrap
+	margin: 20px 0 
 .shop-nav
 	position: relative
 	z-index: 10
