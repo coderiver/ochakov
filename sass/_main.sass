@@ -224,6 +224,7 @@
 		border-top: 1px solid #fff
 .cat-nav-wrap_mod
 	margin: 0
+	position: relative
 	width: 100%	
 	border-color: #565656
 	border-bottom: 0
@@ -238,7 +239,6 @@
 	text-align: center
 	line-height: 1 
 	color: #fff
-	overflow: hidden
 	+tr(background .4s)
 	text-align: center
 	+r(980)
@@ -272,6 +272,16 @@
 	&:nth-child(2n+1)
 		+r(768)
 			border-left: 0
+	&__main
+		display: block
+		color: #fff
+	&__drop
+		position: absolute
+		display: none
+		left: 0
+		right: 0
+		top: 100%
+		background: #fff
 	&__img
 		display: block
 		height: 112px
