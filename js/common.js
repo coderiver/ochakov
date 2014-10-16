@@ -207,6 +207,23 @@ head.ready(function() {
 		slidesToScroll: 5,
 		arrows: false
 	});
+	$('.js-slider-color-width').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 8,
+		slidesToScroll: 8,
+		arrows: false
+	});
+	$(".js-color-prev").on("click",function(){
+		$('.js-slider-color').slickPrev();
+		$('.js-slider-color-width').slickPrev();
+	});
+	$(".js-color-next").on("click",function(){
+		$('.js-slider-color').slickNext();
+		$('.js-slider-color-width').slickNext();
+	});
+
 	$('body').on("click",".js-slider-color a", function(){
 		$(".js-slider-color a").removeClass("is-active");
 		$(this).addClass("is-active");
@@ -217,13 +234,7 @@ head.ready(function() {
 		$(this).addClass("is-active");
 		return false;
 	});
-
-	$(".js-color-prev").on("click",function(){
-		$('.js-slider-color').slickPrev();
-	});
-	$(".js-color-next").on("click",function(){
-		$('.js-slider-color').slickNext();
-	});
+	
 
 	$(".js-carousel-next").on("click",function(){
 		$('.js-carousel').slickNext();
@@ -234,6 +245,33 @@ head.ready(function() {
 	});
 	$(".js-client-next").on("click",function(){
 		$('.js-slider-clients').slickNext();
+	});
+
+	$('.js-prod-slider').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		arrows: false,
+		responsive: [
+		    {
+		      breakpoint: 640,
+		      settings: {
+		      	centerMode: true,
+        		centerPadding: '15px',
+       			slidesToShow: 1,
+		        arrows: false
+		      }
+		    }
+		]
+	});
+
+	$(".js-prod-prev").on("click",function(){
+		$(this).parents(".prod-slider").find('.js-prod-slider').slickPrev();
+	});
+	$(".js-prod-next").on("click",function(){
+		$(this).parents(".prod-slider").find('.js-prod-slider').slickNext();
 	});
 
 	function number() { 
@@ -331,6 +369,37 @@ head.ready(function() {
        });
   	}
   	tab();
+
+  	// $(".item").on("touchstart",function(){
+  	// 	$(this).addClass("is-active");
+  	// });
+
+	$('.js-slider-product').slick({
+		slidesToShow: 1,
+		infinite: true,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.js-slider-preview'
+	});
+	$('.js-slider-preview').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		infinite: true,
+		asNavFor: '.js-slider-product',
+		dots: false,
+		arrows: false,
+		// centerMode: true,
+		focusOnSelect: true
+	});
+
+	$(".js-client-prev").on("click",function(){
+		$('.js-slider-clients').slickPrev();
+	});
+	$(".js-scroller-next").on("click",function(){
+		$('.js-slider-preview').slickNext();
+	});
+				
 
   	
 });

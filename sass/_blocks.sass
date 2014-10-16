@@ -23,10 +23,18 @@
 		display: block
 		padding: 25px 20px 0 20px 
 .l-cols_catalog
-	.l-col-right
-		padding: 0
+	+r(980)
+		display: block
 	.l-col-left
 		box-shadow: none 
+		+r(980)
+			display: block
+			width: 100%
+	.l-col-right
+		padding: 0
+		+r(980)
+			display: block
+			
 .icon-cart
 	+svg(cart,16,17) 
 .icon-cart2
@@ -358,6 +366,7 @@
 .load-more
 	position: relative
 	height: 40px
+	clear: both
 	a
 		position: absolute
 		left: -45px
@@ -382,6 +391,10 @@
 		a
 			position: static
 			display: block
+.load-more_mod
+	a
+		position: static
+		display: block
 .link-back
 	margin: 0 0 15px 
 	border-bottom: 1px solid $border 
@@ -521,6 +534,9 @@
 		display: inline-block
 		font-size: 12px
 		color: $gray 
+		+r(980)
+			display: block
+			margin-bottom: 10px
 .sort
 	display: inline-block
 	margin-right: 11px
@@ -530,12 +546,17 @@
 	padding: 3px 25px 3px 10px 
 	font-size: 12px
 	color: $devil
+	+r(980)
+		margin-right: 0
+		padding-right: 18px
 	&:after
 		content: ""
 		position: absolute
 		top: 9px
 		right: 11px
 		+arr(8,4,$gray,b) 
+		+r(980)
+			right: 4px
 	&.is-active
 		border-color: #8fbed8
 		span
@@ -564,10 +585,23 @@
 	line-height: 1.2
 	border-bottom: 1px solid $border  
 	border-left: 1px solid $border  
+	+r(768)
+		width: 50%
+		border-right: 1px solid $border 
+		border-left: 0
+	+r(360)
+		width: 100%
+		border-left: 0
 	&:nth-child(3n+1)
 		border-left: 0
-	&:hover,
-	&.is-active
+		+r(768)
+			border-left: 1px solid $border 
+		+r(360)
+			border-left: 0
+	&:nth-child(2n)
+		+r(768)
+			border-right: 0
+	&:hover
 		z-index: 2
 		.item__body	
 			height: auto

@@ -190,6 +190,13 @@ a
 	height: 100%	 
 	+r(768)
 		margin-bottom: -123px
+.touch
+	.out
+		margin-bottom: 0
+		+r(768)
+			margin-bottom: 0
+	.push
+		display: none
 .push
 	clear: both
 	height: 286px
@@ -221,6 +228,8 @@ a
 		height: 108px
 	.l-center
 		border-bottom: 1px solid $border 
+	+ .l-center
+		z-index: 3
 .header__top
 	position: relative
 	z-index: 11
