@@ -399,7 +399,19 @@ head.ready(function() {
 	$(".js-scroller-next").on("click",function(){
 		$('.js-slider-preview').slickNext();
 	});
-				
+			
+
+	$(".js-sort").on("click",function(){
+		$(this).parents(".js-sort-group").find("a").removeClass("is-active");
+		$(this).addClass("is-active");
+		if ($(this).hasClass("is-top")) {
+			$(this).removeClass("is-top").addClass("is-down");
+		}
+		else {
+			$(this).removeClass("is-down").addClass("is-top");
+		}
+		return false;
+	});
 
   	
 });

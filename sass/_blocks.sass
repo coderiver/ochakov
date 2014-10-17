@@ -560,13 +560,22 @@
 	&.is-active
 		border-color: #8fbed8
 		span
-			border-color: transparent 
+			border-color: transparent
+		&.is-down
+			&:after
+				+arr(8,4,$blue,b)  
 		&.is-top
 			&:after
 				+arr(8,4,$blue,t) 
-		&.is-bottom
-			&:after
-				+arr(8,4,$blue,b) 
+	&.is-down
+		&:after
+			+arr(8,4,$gray,b) 
+	&.is-top
+		&:after
+			+arr(8,4,$gray,t) 
+		// &.is-bottom
+		// 	&:after
+		// 		+arr(8,4,$blue,b) 
 	&:hover
 		span
 			border-color: transparent 	
