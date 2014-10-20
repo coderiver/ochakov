@@ -219,7 +219,7 @@ a
 
 .header
 	position: relative
-	z-index: 10
+	z-index: 11
 	margin-top: 23px
 	+r(980)
 		margin: 0 0 36px
@@ -229,7 +229,7 @@ a
 	.l-center
 		border-bottom: 1px solid $border 
 	+ .l-center
-		z-index: 3
+		z-index: 3 
 .header__top
 	position: relative
 	z-index: 11
@@ -614,6 +614,8 @@ a
 				> a
 					&:before
 						display: block
+						+r(980)
+							display: none
 
 			> a
 				position: relative
@@ -628,6 +630,7 @@ a
 					+tr(color .4s)
 					+r(980)
 						right: 21px
+						top: 15px
 				&:before
 					display: none
 					content: ""
