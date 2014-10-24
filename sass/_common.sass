@@ -185,6 +185,7 @@ a
 	overflow: hidden 
 .out
 	margin: 0 0 -286px
+	position: relative
 	min-height: 100%
 	height: auto !important
 	height: 100%	 
@@ -206,13 +207,23 @@ a
 	+icon
 .page-bg
 	position: absolute
-	top: 0
 	left: 0
-	right: 0
+	top: -23px
 	bottom: 0
+	right: 0
 	z-index: -1
-	background-position: 50% 0 
-	background-repeat: no-repeat 
+	text-align: center
+	background: none
+	overflow: hidden
+	&__in
+		position: absolute
+		top: 0
+		left: 50%
+		bottom: 0
+		margin-left: -1500px
+		width: 3000px
+	// background-position: 50% 0 
+	// background-repeat: no-repeat 
 	// +r(768)
 	// 	display: none
 // common blocks      
