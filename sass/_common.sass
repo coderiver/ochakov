@@ -611,16 +611,23 @@ a
 				line-height: 1
 			&:hover
 				color: $blue 
-		&.has-drop-nav
+		&.has-drop-nav	
+			&:first-child
+				&:hover
+					> a
+						&:before
+							display: block
+							+r(980)
+								display: none
 			&:hover
 				.nav__drop
 					opacity: 1
 					visibility: visible 
-				> a
-					&:before
-						display: block
-						+r(980)
-							display: none
+				// > a
+				// 	&:before
+				// 		display: block
+				// 		+r(980)
+				// 			display: none
 
 			> a
 				position: relative
@@ -636,14 +643,14 @@ a
 					+r(980)
 						right: 21px
 						top: 15px
-				// &:before
-				// 	display: none
-				// 	content: ""
-				// 	position: absolute
-				// 	bottom: -1px
-				// 	left: 50%
-				// 	margin-left: -8px 
-				// 	+arr(16,4,#252525,t)
+				&:before
+					display: none
+					content: ""
+					position: absolute
+					bottom: -1px
+					left: 50%
+					margin-left: -8px 
+					+arr(16,4,#252525,t)
 		&.is-active
 			// &.has-drop-nav
 			// 	> a
