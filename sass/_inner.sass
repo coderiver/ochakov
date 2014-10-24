@@ -671,6 +671,7 @@
 	color: $gray_d
 	width: 648px
 	+reg 
+
 	thead,tfoot
 		text-align: left
 		background: #f5f5f5 
@@ -763,6 +764,23 @@
 		white-space: nowrap
 	
 .table_cart
+	&.is-active
+		.number
+			&__btn
+				display: block
+		tr
+			&:hover
+				.table__total
+					.icon
+						display: block
+	.number
+		&__btn
+			display: none
+	tr
+		&:hover
+			.table__total
+				.icon
+					display: none
 	td
 		min-height: 110px
 		&:nth-child(4)

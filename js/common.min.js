@@ -440,6 +440,14 @@ $(document).ready(function() {
         $(this).parents(".js-select").removeClass("is-active");
         return false;
         
+    }); 
+    $(".js-change-order").on("click",function() {
+	    $(this).toggleClass("is-active");
+	    $(".js-table-order").toggleClass("is-active");
+        return false;
+        
     });
+
+
   	
 });
