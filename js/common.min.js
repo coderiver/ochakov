@@ -3,6 +3,7 @@ $(document).ready(function() {
 	$(document).on("click", function(){
         $(".js-overlay").fadeOut(400);
         $("html").removeClass("has-open-popup");
+        $(".js-select").removeClass("is-active");s
 	});
 	document.createElement( "picture" );
 	
@@ -414,6 +415,31 @@ $(document).ready(function() {
 		return false;
 	});
 
-	
+	// select list
+    $(".js-select").on("click",function(event) {
+        event.stopPropagation();
+    });
+    $(".js-select-text").on("click",function(event) {
+        if ($(this).parents(".js-select").hasClass("is-active")) {
+            $(".js-select").removeClass("is-active");
+        }
+        else {
+            $(".js-select").removeClass("is-active");
+            $(this).parents(".js-select").toggleClass("is-active");
+        }
+       
+    });
+    $(".js-select-list a").on("click",function() {
+        var val = $(this).attr("href");
+        var text = $(this).text();
+        $(this).parents(".js-select").find(".js-select-text").text(text);
+        $(this).parents(".js-select").find("option").removeAttr("selected");
+        $(this).parents(".js-select").find('option[value="'+val+'"]').attr("selected", "selected");
+        $(this).parents(".js-select-list").find("a").removeClass("is-active");
+        $(this).addClass("is-active");
+        $(this).parents(".js-select").removeClass("is-active");
+        return false;
+        
+    });
   	
 });

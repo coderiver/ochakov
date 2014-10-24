@@ -215,12 +215,18 @@
 .drop-list
 	position: relative
 	height: 40px
+	&.is-active
+		.drop-list__main
+			opacity: 1
+			visibility: visible
 	&__text
 		display: inline-block
 		position: relative
-		padding: 0 14px 0 23px
+		padding: 0 14px 0 43px
 		height: 40px
+		z-index: 2
 		line-height: 40px
+		max-width: 95%
 		overflow: hidden
 		font-size: 14px
 		+csbold
@@ -237,24 +243,35 @@
 			+arr(6,3,#000,b) 
 	.icon
 		position: absolute
-		left: 0
+		left: 20px
 		top: 5px
+		z-index: 2
 		font-size: 19px
 		color: $blue 
 	&__main
 		position: absolute
-		top: 100%
+		top: 0
 		left: 0
+		padding: 40px 10px 0
 		+csbold
-		display: none
-		border-radius: 4px 
-		background: #f1f2f5 
+		opacity: 0
+		visibility: hidden
+		font-size: 14px
+		background: #fff
 		overflow: hidden
+		+tr(opacity .4s)
+		will-change: opacity
+		box-shadow: 0 0 5px rgba(#000,.5) 
+		li
+			border-top: 1px solid #e5e5e5
+			&:first-child
+				border: 0
 		a
 			display: block
-			padding: 5px 23px 
-			color: #000
+			padding: 4px 5px 4px 12px 
+			color: $devil
 			+tr(color .2s)
+			white-space: nowrap
 			&:hover
 				color: $blue 
 				

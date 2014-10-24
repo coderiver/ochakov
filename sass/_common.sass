@@ -245,7 +245,6 @@ a
 	position: relative
 	z-index: 11
 	border-bottom: 1px solid $border 
-	padding: 0 0 0 20px 
 	height: 40px
 	+clr
 	background: #f1f2f5 
@@ -327,7 +326,9 @@ a
 .header__search,
 	float: left
 .header__location
-	width: 110px
+	width: 130px
+	position: relative
+	z-index: 2
 	+r(980)
 		display: none
 .header__contacts
@@ -623,8 +624,10 @@ a
 			&:hover
 				color: $blue 
 		&.has-drop-nav	
-			&:first-child
-				&:hover
+			&.is-about,
+			&.is-emarket
+				&:hover,
+				&.is-active
 					> a
 						&:before
 							display: block

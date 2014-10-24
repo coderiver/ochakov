@@ -674,6 +674,11 @@
 	thead,tfoot
 		text-align: left
 		background: #f5f5f5 
+	tr
+		&:hover
+			.table__total
+				.icon
+					display: block
 	th, td
 		border-top: 1px solid #eee 
 		border-bottom: 1px solid #eee 
@@ -741,7 +746,10 @@
 			color: #ccc
 			font-size: 15px 
 			cursor: pointer
+			display: none
 			+tr(color .4s)
+			+r(980)
+				display: block
 			&:hover
 				color: #f00 
 		&.is-small
