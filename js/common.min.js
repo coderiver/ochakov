@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$(document).on("click", function(){
         $(".js-overlay").fadeOut(400);
         $("html").removeClass("has-open-popup");
-        $(".js-select").removeClass("is-active");s
+        $(".js-select").removeClass("is-active");
 	});
 	document.createElement( "picture" );
 	
@@ -444,6 +444,21 @@ $(document).ready(function() {
     $(".js-change-order").on("click",function() {
 	    $(this).toggleClass("is-active");
 	    $(".js-table-order").toggleClass("is-active");
+        return false;
+        
+    });
+
+    $(".js-color").on("click",function() {
+    	if ($(this).hasClass("is-active")) {
+    		$(this).removeClass("is-active");
+    		$(this).find("input").removeAttr("checked");
+    	}
+    	else {
+    		$(this).parents(".js-colors-wrap").find(".js-color").removeClass("is-active");
+    		$(this).addClass("is-active");
+    		$(this).find("input").attr("checked", "checked");
+    	}
+	    
         return false;
         
     });

@@ -267,6 +267,27 @@
 		+r(768)	
 			float: none
 			display: block
+	figure
+		display: inline-block
+		margin: 0 0 20px 
+		vertical-align: top
+		padding: 0 1% 
+		width: 32%
+		text-align: center
+		+r(640)
+			width: 48%
+			padding: 0 2%
+		+r(480)
+			width: 100%
+			padding: 0
+		img
+			display: inline-block
+	figcaption
+		display: block
+		margin: 9px auto 
+		max-width: 80%
+		color: $devil
+		font-size: 14px 
 	ul
 		margin: 18px 0
 		line-height: 1.2
@@ -979,6 +1000,7 @@
 		.slick-slide
 			border-left: 1px solid #fff 
 			border-top: 1px solid #fff 
+			cursor: pointer
 	&__next
 		position: absolute
 		bottom: 0
