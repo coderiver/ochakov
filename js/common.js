@@ -1,4 +1,4 @@
-head.ready(function() {
+$(document).ready(function() {
 
 	$(document).on("click", function(){
         $(".js-overlay").fadeOut(400);
@@ -413,5 +413,6 @@ head.ready(function() {
 		return false;
 	});
 
+	
   	
 });

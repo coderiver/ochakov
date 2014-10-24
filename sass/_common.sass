@@ -453,23 +453,28 @@ a
 .cart-drop
 	position: absolute
 	top: 100%
+	z-index: 3
 	width: 315px
 	padding-top: 10px
-	background: #fff
+	margin-top: -10px
 	opacity: 0
 	visibility: hidden
 	will-change: opacity
 	+tr(opacity .4s)
 	+r(980)
 		display: none
-	&:before
-		content: ""
-		position: absolute
-		top: -7px
-		left: 50%
-		z-index: 10
-		margin-left: -6px
-		+arr(12,7,#fff,t) 
+	&__in
+		position: relative
+		padding-top: 10px
+		background: #fff
+		&:before
+			content: ""
+			position: absolute
+			top: -7px
+			left: 50%
+			z-index: 10
+			margin-left: -6px
+			+arr(12,7,#fff,t) 
 	&__list
 		padding: 10px 
 		max-height: 215px
@@ -631,14 +636,14 @@ a
 					+r(980)
 						right: 21px
 						top: 15px
-				&:before
-					display: none
-					content: ""
-					position: absolute
-					bottom: -1px
-					left: 50%
-					margin-left: -8px 
-					+arr(16,4,#252525,t)
+				// &:before
+				// 	display: none
+				// 	content: ""
+				// 	position: absolute
+				// 	bottom: -1px
+				// 	left: 50%
+				// 	margin-left: -8px 
+				// 	+arr(16,4,#252525,t)
 		&.is-active
 			// &.has-drop-nav
 			// 	> a
