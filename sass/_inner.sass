@@ -50,15 +50,27 @@
 		&.is-active
 			a
 				color: $blue 
+				&:after
+					display: block
 	a
 		display: block
-		padding: 12px 0
+		position: relative
+		padding: 12px 10px 12px 0
 		border-bottom: 1px solid $border 
 		color: $devil
 		font-size: 14px
 		+reg 
 		+tr(color .4s)
 		&:hover
+			color: $blue 
+		&:after
+			content: "×" 
+			position: absolute
+			display: none
+			right: 0
+			top: 12px
+			+icon
+			font-size: 14px
 			color: $blue 
 .sidebar__menu
 	margin: 0 0 30px 
