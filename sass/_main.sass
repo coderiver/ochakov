@@ -225,6 +225,57 @@
 		border-bottom: 0 
 	+r(768)
 		border-top: 1px solid #fff
+#a1,#a2,#a3,#a4,#a5,#a6
+	position: relative
+	div,svg
+		width: 100px 
+		height: 100px 
+		// background: red 
+		position: absolute
+		left: 50%
+		top: 50%
+		margin-left: -50px   
+		margin-top: -50px 
+	img
+		opacity: 0
+	svg path
+		fill: #fff !important
+
+#a1
+	svg
+		top: 20px
+		margin-top: 0  
+#a2
+	svg
+		margin-top: 0
+		top: 10px  
+		height: 75px 
+#a3
+	svg
+		margin-top: 0
+		top: 20px  
+		height: 100px 
+		+r(980)
+			top: 30px 
+#a4
+	svg
+		margin-top: 0
+		top: 20px  
+		height: 50px 
+#a5
+	svg
+		margin-top: 0
+		top: 20px  
+		height: 50px 
+	
+#a6
+	svg
+		margin-top: 0
+		top: 40px 
+		width: 120px 
+		height: 80px 
+		margin-left: -70px 
+
 .cat-nav-wrap_mod
 	margin: 0
 	position: relative
@@ -417,6 +468,8 @@
 			display: table-cell
 			vertical-align: middle
 			width: 95px
+			// padding-right: 20px 
+			width: 115px 
 			height: auto
 			margin: 0
 			line-height: 1
