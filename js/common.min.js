@@ -90,7 +90,7 @@ $(document).ready(function() {
 		      	centerMode: true,
         		centerPadding: '45px',
        			slidesToShow: 1,
-		        arrows: false
+		        arrows: false,
 		      }
 		    },
 		    {
@@ -120,6 +120,7 @@ $(document).ready(function() {
        			slidesToShow: 2,
        			slidesToScroll: 1,
 		        arrows: false,
+		        dots: false,
 		        adaptiveHeight: true
 		      }
 		    },
