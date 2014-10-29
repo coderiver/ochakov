@@ -785,7 +785,7 @@ a
 	+reg
 	font-size: 14px
 	+r(768)
-		padding: 22px 20px 18px
+		padding: 22px 20px 45px
 	.l-center
 		padding-right: 180px
 		+clr
@@ -871,7 +871,7 @@ a
 .soc
 	position: absolute
 	left: 0
-	bottom: 53px
+	bottom: 115px
 	+r(980)
 		position: static
 		float: left
@@ -893,7 +893,7 @@ a
 .footer__copy
 	position: absolute
 	right: 0
-	bottom: 3px
+	bottom: 70px
 	width: 180px
 	color: #fff
 	opacity: 0.56 
@@ -911,9 +911,38 @@ a
 		width: 80%
 		border: 0
 		position: static 
-		
+.created-by
+	position: absolute
+	bottom: 0
+	right: 0
+	font-size: 12px
+	+sbold 
+	+r(980)
+		width: auto
+		bottom: -19px
+	+r(768)
+		text-align: center
+		left: 0
+		bottom: -32px
+	a
+		display: inline-block
+		color: #fff
+		&:hover
+			span
+				opacity: 1
+	div
+		display: inline-block
+		margin-right: 10px
+		vertical-align: middle
+	span
+		display: block
+		opacity: 0.5
+		+tr(opacity .4s)
+	img
+		vertical-align: middle
 .opera12
 	.nav
 		text-align: center
 		li
 			margin-right: 20px
+
