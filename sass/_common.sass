@@ -941,8 +941,52 @@ a
 	img
 		vertical-align: middle
 .opera12
+	.footer__nav,
+	.footer__copy
+		opacity: 1
+		a
+			opacity: 1
+			color: #cbddec 
+	.created-by 
+		span
+			opacity: 1
+			color: #cbddec 
 	.nav
 		text-align: center
 		li
 			margin-right: 20px
-
+	.cat-nav-parent
+		width: 17%
+		display: block
+		&:last-child
+			width: 15%	
+		&:first-child
+			border-left: 0
+			// +r(980)
+			// 	width: 33.3%
+			// +r(768)
+			// 	width: 50%
+		&:nth-child(4)
+			+r(980)
+				border-left: 0
+			+r(768)
+				border-left: 1px solid #565656
+		&:nth-child(2n+1)
+			+r(768)
+				border-left: 0
+		+r(980)
+			width: 33%
+			border-bottom: 1px solid #565656
+			
+		+r(768)
+			width: 50%
+		&:nth-child(3n+1)
+			+r(980)
+				width: 34%
+			+r(768)
+				width: 50%s	
+		.cat-nav
+			display: block
+		&__text
+			opacity: 1
+			color: #cbcbcb
