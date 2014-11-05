@@ -129,6 +129,7 @@ $green: #009d5a
 		top: 0
 		left: 50%
 		width: 980px
+		z-index: 12
 		margin-left: -490px
 		border-bottom: 1px solid $border 
 	.shop-nav
@@ -139,6 +140,11 @@ $green: #009d5a
 		left: 50%
 		width: 980px
 		margin-left: -490px
+		+r(980)
+			position: static
+			left: 0
+			margin-left: 0
+			width: 100%
 	.cat-nav-wrap_mod
 		.cat-nav
 			height: 55px
@@ -597,11 +603,13 @@ a
 		overflow-x: hidden
 		+tr(transform .5s)
 		will-change: transform
-		border-bottom: 1px solid $border 
+		border-bottom: 1px solid $border
+		visibility: hidden 
 		&.is-active
 			+transform(translateY(0%))
+			visibility: visible
 	+r(768)
-		top: 108px
+		top: 106px
 	&__item
 		display: inline-block
 		vertical-align: middle

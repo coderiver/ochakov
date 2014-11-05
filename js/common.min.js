@@ -34,7 +34,20 @@ $(document).ready(function() {
 	$(".js-toggle-key").on("click", function(){
 		var el = $(this).attr("data-toggle");
 		$("."+el).toggleClass("is-active");
+		//$("html").toggleClass("has-active-nav");
+		return false; 
+	});
+
+	//var bodyScroll = 0;
+
+	$(".js-toggle-key-nav").on("click", function(){
+		//bodyScroll = $(window).scrollTop();
+		//alert(bodyScroll);
+		var el = $(this).attr("data-toggle");
+		$("."+el).toggleClass("is-active");0
+		//$("body").scrollTop(bodyScroll);
 		$("html").toggleClass("has-active-nav");
+		return false; 
 	});
 
 	$('.js-slick').slick({

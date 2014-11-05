@@ -685,12 +685,27 @@
 		padding: 0 0 10px
 		overflow-x: auto
 		overflow-y: hidden
+	&.is-mob-version
+		display: none
+		margin-bottom: 30px
+		&:after
+			display: none
+		+r(768)
+			display: block
+		.table
+			min-width: 100%
+
+	&.is-desktop-version
+		+r(768)
+			display: none
+			
 
 .table
 	position: relative
 	font-size: 14px
 	color: $gray_d
-	width: 648px
+	width: 100%
+	min-width: 648px
 	+reg 
 
 	thead,tfoot
@@ -784,7 +799,7 @@
 	&__total-title
 		white-space: nowrap
 	
-.table_cart
+.table.is-dinamic-content
 	&.is-active
 		.number
 			&__btn
@@ -802,6 +817,7 @@
 			.table__total
 				.icon
 					display: none
+.table_cart
 	td
 		min-height: 110px
 		&:nth-child(4)
@@ -832,6 +848,7 @@
 	text-align: right
 	padding-top: 10px
 .prod
+	position: relative
 	white-space: nowrap
 	border-top: 1px solid #f0f0f0 
 	padding: 10px 0 
@@ -875,6 +892,14 @@
 		span
 			color: $blue
 			+sbold
+	&__del
+		.icon
+			position: absolute
+			top: 10px
+			right: 10px
+			cursor: pointer
+			color: #f00
+			font-size: 20px
 .prod_view
 	white-space: normal
 	padding: 12px 5px 5px 0
@@ -886,6 +911,15 @@
 	.prod__title
 		width: 100%
 		display: block
+.prod_liquid
+	padding-right: 20px
+	.prod__title
+		width: 100%
+		margin-bottom: 10px
+		font-size: 16px
+	.table__price,
+	.number
+		margin: 10px 0 
 .prod-row
 	font-size: 0
 	padding-bottom: 30px
