@@ -34,18 +34,13 @@ $(document).ready(function() {
 	$(".js-toggle-key").on("click", function(){
 		var el = $(this).attr("data-toggle");
 		$("."+el).toggleClass("is-active");
-		//$("html").toggleClass("has-active-nav");
 		return false; 
 	});
 
-	//var bodyScroll = 0;
 
 	$(".js-toggle-key-nav").on("click", function(){
-		//bodyScroll = $(window).scrollTop();
-		//alert(bodyScroll);
 		var el = $(this).attr("data-toggle");
-		$("."+el).toggleClass("is-active");0
-		//$("body").scrollTop(bodyScroll);
+		$("."+el).toggleClass("is-active");
 		$("html").toggleClass("has-active-nav");
 		return false; 
 	});
@@ -354,6 +349,15 @@ $(document).ready(function() {
 	});
 
 	function fixedHeader() {
+		var top = 23;
+		if ($(document).scrollTop() >= top) {
+			$("html").addClass("has-fixed-header-desktop");
+		}
+		else {
+			$("html").removeClass("has-fixed-header-desktop");
+		}
+	}
+	function fixedHeaderMob() {
 		var top = $(".header__top").outerHeight() + 23;
 		if ($(document).scrollTop() >= top) {
 			$("html").addClass("has-fixed-header");
@@ -363,7 +367,7 @@ $(document).ready(function() {
 		}
 	}
 	function fixedCatNav() {
-		var top = $(".header").outerHeight() + $(".menu-wrap").outerHeight();
+		var top = $(".menu-wrap").outerHeight() + 23;
 		if ($(document).scrollTop() >= top) {
 			$("html").addClass("has-fixed-cat");
 		}
@@ -375,10 +379,25 @@ $(document).ready(function() {
 		fixedHeader();
 		fixedCatNav()
 	}
+	if ($(window).width() < 963) {
+		fixedHeaderMob();
+	}
 	$(window).scroll(function(){
 		if ($(window).width() > 963) {
 			fixedHeader();
 			fixedCatNav()
+		}
+		if ($(window).width() < 963) {
+			fixedHeaderMob();
+		}
+	});
+	$(window).resize(function(){
+		if ($(window).width() > 963) {
+			fixedHeader();
+			fixedCatNav()
+		}
+		if ($(window).width() < 963) {
+			fixedHeaderMob();
 		}
 	});
 
