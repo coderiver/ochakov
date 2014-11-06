@@ -195,10 +195,11 @@ html {
   margin-left: -490px;
   border-bottom: 1px solid #e5e5e5;
 }
-.has-fixed-header .shop-nav {
-  margin-bottom: 102px;
+
+.has-fixed-cat .shop-nav {
+  margin-bottom: 35px;
 }
-.has-fixed-header .shop-nav__in {
+.has-fixed-cat .cat-nav-wrap_mod {
   position: fixed;
   top: 83px;
   left: 50%;
@@ -206,22 +207,22 @@ html {
   margin-left: -490px;
 }
 @media only screen and (max-width: 980px) {
-  .has-fixed-header .shop-nav__in {
+  .has-fixed-cat .cat-nav-wrap_mod {
     position: static;
     left: 0;
     margin-left: 0;
     width: 100%;
   }
 }
-.has-fixed-header .cat-nav-wrap_mod .cat-nav {
+.has-fixed-cat .cat-nav-wrap_mod .cat-nav {
   height: 55px;
   line-height: 55px;
 }
-.has-fixed-header .cat-nav-wrap_mod .cat-nav__img,
-.has-fixed-header .cat-nav-wrap_mod .cat-nav__text {
+.has-fixed-cat .cat-nav-wrap_mod .cat-nav__img,
+.has-fixed-cat .cat-nav-wrap_mod .cat-nav__text {
   display: none;
 }
-.has-fixed-header .cat-nav-wrap_mod .cat-nav__title {
+.has-fixed-cat .cat-nav-wrap_mod .cat-nav__title {
   display: inline-block;
   margin-bottom: 0;
   vertical-align: middle;

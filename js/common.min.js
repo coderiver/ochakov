@@ -362,12 +362,23 @@ $(document).ready(function() {
 			$("html").removeClass("has-fixed-header");
 		}
 	}
+	function fixedCatNav() {
+		var top = $(".header").outerHeight() + $(".menu-wrap").outerHeight();
+		if ($(document).scrollTop() >= top) {
+			$("html").addClass("has-fixed-cat");
+		}
+		else {
+			$("html").removeClass("has-fixed-cat");
+		}
+	}
 	if ($(window).width() > 963) {
 		fixedHeader();
+		fixedCatNav()
 	}
 	$(window).scroll(function(){
 		if ($(window).width() > 963) {
 			fixedHeader();
+			fixedCatNav()
 		}
 	});
 
