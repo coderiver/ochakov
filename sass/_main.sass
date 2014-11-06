@@ -514,6 +514,13 @@
 .cat-nav_dark
 	background: $gray_d
 	border-color: #565656 
+	svg
+		opacity: 0.5
+		will-change: opacity
+		+tr(opacity .3s)
+	&:hover
+		svg
+			opacity: 1
 	&.is-active
 		background: #009d59 
 	&:nth-child(4)

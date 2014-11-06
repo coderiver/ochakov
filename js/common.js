@@ -80,8 +80,6 @@ $(document).ready(function() {
 		    {
 		      breakpoint: 480,
 		      settings: {
-		        centerMode: true,
-        		centerPadding: '60px',
        			slidesToShow: 1,
 		        arrows: false
 		      }
