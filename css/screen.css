@@ -195,6 +195,13 @@ html {
   margin-left: -490px;
   border-bottom: 1px solid #e5e5e5;
 }
+@media only screen and (max-width: 768px) {
+  .has-fixed-header .header__main {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+  }
+}
 
 .has-fixed-header-desktop .header {
   padding-top: 126px;
@@ -405,6 +412,7 @@ a {
 }
 @media only screen and (max-width: 768px) {
   .header__top {
+    position: static;
     height: 68px;
     padding: 0;
     border-bottom: 1px solid #e5e5e5;
@@ -693,9 +701,9 @@ a {
 }
 @media only screen and (max-width: 768px) {
   .info-item__link {
-    height: 68px;
+    height: 67px;
     padding: 0;
-    line-height: 68px;
+    line-height: 67px;
     text-align: center;
   }
 }
@@ -835,7 +843,6 @@ a {
     position: absolute;
     right: 63px;
     top: 0;
-    bottom: 0;
     border-color: #e5e5e5;
     background: white;
     width: 69px;
@@ -2735,7 +2742,7 @@ a {
 .main-slider {
   position: relative;
   z-index: 1;
-  margin-top: -146px;
+  margin-top: -148px;
   min-height: 525px;
   overflow: hidden;
   max-height: 744px;

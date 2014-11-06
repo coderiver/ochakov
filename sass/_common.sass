@@ -132,6 +132,10 @@ $green: #009d5a
 		z-index: 12
 		margin-left: -490px
 		border-bottom: 1px solid $border 
+		+r(768)
+			position: static
+			margin-left: 0
+			width: 100%
 	// .shop-nav
 	// 	margin-bottom: 102px
 .has-fixed-header-desktop
@@ -278,6 +282,7 @@ a
 		height: 71px 
 		overflow: visible
 	+r(768)
+		position: static
 		height: 68px
 		padding: 0
 		border-bottom: 1px solid $border 
@@ -454,9 +459,9 @@ a
 			height: 71px
 			line-height: 71px
 		+r(768)
-			height: 68px
+			height: 67px
 			padding: 0 
-			line-height: 68px
+			line-height: 67px
 			text-align: center
 		i,
 		span
@@ -550,7 +555,6 @@ a
 		position: absolute
 		right: 63px
 		top: 0
-		bottom: 0
 		border-color: $border 
 		background: #fff 
 		width: 69px
