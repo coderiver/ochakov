@@ -333,6 +333,17 @@
 					top: 0
 					counter-increment: list2
 					content: counter(list1) "." counter(list2) ". "
+	.table-wrap
+		+r(980)
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				width: 10px
+				z-index: 2
+				+gh(rgba(#fff,0), rgba(#fff,1)) 
 	table
 		font-size: 14px
 		color: $devil 
@@ -671,16 +682,16 @@
 .table-wrap
 	position: relative
 	margin: 20px 0 40px 
-	+r(980)
-		&:after
-			content: ""
-			position: absolute
-			top: 0
-			right: 0
-			bottom: 0
-			width: 10px
-			z-index: 2
-			+gh(rgba(#fff,0), rgba(#fff,1)) 
+	// +r(980)
+	// 	&:after
+	// 		content: ""
+	// 		position: absolute
+	// 		top: 0
+	// 		right: 0
+	// 		bottom: 0
+	// 		width: 10px
+	// 		z-index: 2
+	// 		+gh(rgba(#fff,0), rgba(#fff,1)) 
 	&__body
 		padding: 0 0 10px
 		overflow-x: auto

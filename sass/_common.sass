@@ -1020,3 +1020,23 @@ a
 	.cat-nav__img
 		+r(980)
 			display: block
+	.table
+		tr
+			&:hover
+				z-index: 2 
+				td
+					position: relative
+					z-index: 2
+					border-top-color: #d7eeff !important
+					border-bottom-color: #d7eeff !important
+					&:first-child
+						border-left: 1px solid #d7eeff
+						box-shadow: none
+					&:last-child
+						border-right: 1px solid #d7eeff
+					&:after,
+					&:before
+						display: none
+				.table__total 
+					.icon
+						right: -7px

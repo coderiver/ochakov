@@ -130,7 +130,8 @@
 					</div>
 				</div>
 				<div class="map">
-					<div class="map__body" id="map-canvas"></div>
+					<div class="map__body map__desktop" id="map-canvas"></div>
+					
 					<script>
 					  	function initialize() {
 						    var mapOptions = {
@@ -165,11 +166,13 @@
 						  	var infowindow1 = new google.maps.InfoWindow({
 							    content: contentString1
 							});
-							google.maps.event.addListener(marker1, 'click', function(){
-							    infowindow1.open(map,marker1);
-							});
-							infowindow1.open(map,marker1);
-
+							
+							if ($(window).width() > 768) {
+								infowindow1.open(map,marker1);
+								google.maps.event.addListener(marker1, 'click', function(){
+								    infowindow1.open(map,marker1);
+								});
+							}
 						}
 					  	// Asynchronous Loading
 						function loadScript() {
