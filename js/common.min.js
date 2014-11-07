@@ -346,57 +346,54 @@ $(document).ready(function() {
 		return false;
 	});
 
+	// function fixedHeader() {
+	// 	var top = 23;
+	// 	if ($(document).scrollTop() >= top) {
+	// 		$("html").addClass("has-fixed-header-desktop");
+	// 	}
+	// 	else {
+	// 		$("html").removeClass("has-fixed-header-desktop");
+	// 	}
+	// }
 	function fixedHeader() {
-		var top = 23;
-		if ($(document).scrollTop() >= top) {
-			$("html").addClass("has-fixed-header-desktop");
-		}
-		else {
-			$("html").removeClass("has-fixed-header-desktop");
-		}
-	}
-	function fixedHeaderMob() {
-		var top = $(".header__top").outerHeight() + 23;
-		if ($(document).scrollTop() >= top) {
-			$("html").addClass("has-fixed-header");
-		}
-		else {
-			$("html").removeClass("has-fixed-header");
+		if (!$("html").hasClass("has-fixed-group")) {
+			var top = $(".header__top").outerHeight() + 23;
+			if ($(document).scrollTop() >= top) {
+				$("html").addClass("has-fixed-header");
+			}
+			else {
+				$("html").removeClass("has-fixed-header");
+			}
 		}
 	}
 	function fixedCatNav() {
-		var top = $(".menu-wrap").outerHeight() + 23;
-		if ($(document).scrollTop() >= top) {
-			$("html").addClass("has-fixed-cat");
+		if ($("html").hasClass("has-fixed-group")) {
+			var top = 23;
+			if ($(document).scrollTop() >= top) {
+				$("html").addClass("has-fixed-cat");
+			}
+			else {
+				$("html").removeClass("has-fixed-cat");
+			}
 		}
-		else {
-			$("html").removeClass("has-fixed-cat");
-		}
+		
 	}
-	if ($(window).width() > 963) {
+	//if ($(window).width() > 963) {
+
 		fixedHeader();
 		fixedCatNav()
-	}
-	if ($(window).width() < 963) {
-		fixedHeaderMob();
-	}
+	//}
 	$(window).scroll(function(){
-		if ($(window).width() > 963) {
+		//if ($(window).width() > 963) {
 			fixedHeader();
 			fixedCatNav()
-		}
-		if ($(window).width() < 963) {
-			fixedHeaderMob();
-		}
+		//}
 	});
 	$(window).resize(function(){
-		if ($(window).width() > 963) {
+		//if ($(window).width() > 963) {
 			fixedHeader();
 			fixedCatNav()
-		}
-		if ($(window).width() < 963) {
-			fixedHeaderMob();
-		}
+		//}
 	});
 
 	function tab() {

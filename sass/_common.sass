@@ -138,9 +138,21 @@ $green: #009d5a
 			width: 100%
 	// .shop-nav
 	// 	margin-bottom: 102px
-.has-fixed-header-desktop
+// .has-fixed-header-desktop
+// 	.header
+// 		padding-top: 126px
+// 		.l-center
+// 			position: fixed
+// 			top: 0
+// 			left: 50%
+// 			width: 980px
+// 			z-index: 12
+// 			margin: 0 0 0 -490px
+.has-fixed-cat
 	.header
 		padding-top: 126px
+		+r(980)
+			padding-top: 0
 		.l-center
 			position: fixed
 			top: 0
@@ -148,9 +160,10 @@ $green: #009d5a
 			width: 980px
 			z-index: 12
 			margin: 0 0 0 -490px
-.has-fixed-cat
-	.shop-nav
-		margin-bottom: 56px
+			+r(768)
+				position: static
+				margin-left: 0
+				width: 100%
 	.cat-nav-wrap_mod
 		position: fixed
 		top: 125px
@@ -399,7 +412,7 @@ a
 		width: auto	
 	+r(768)
 		margin: 0
-		top: 100%
+		top: 68px
 		left: 0
 		right: 0
 		padding: 0
@@ -444,6 +457,7 @@ a
 		right: auto
 		left: 0
 		width: 52px
+		height: 68px
 		border-right: 1px solid $border 
 .info-item
 	font-size: 14px
@@ -456,12 +470,10 @@ a
 		overflow: hidden
 		text-overflow: ellipsis 
 		+r(980)
-			height: 71px
-			line-height: 71px
+			height: 70px
+			line-height: 70px
 		+r(768)
-			height: 67px
 			padding: 0 
-			line-height: 67px
 			text-align: center
 		i,
 		span
