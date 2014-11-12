@@ -343,12 +343,15 @@ a
 	position: relative
 	padding: 0 20px
 	background: #fff
+	//overflow: hidden
 	+clr
 	+r(980)
 		position: static
 		padding: 0 
 		height: 0
 		margin: 0
+.clr
+	clear: both
 .header__logo
 	float: left
 	margin: 13px 0
@@ -474,6 +477,8 @@ a
 			line-height: 70px
 		+r(768)
 			padding: 0 
+			height: 67px
+			line-height: 67px
 			text-align: center
 		i,
 		span
@@ -748,6 +753,7 @@ a
 		color: #fff 
 		+tr(opacity .4s)
 		will-change: opacity
+		text-align: left
 		+r(980)
 			position: static
 			padding: 0
