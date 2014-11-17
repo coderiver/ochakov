@@ -178,9 +178,14 @@ $green: #009d5a
 		.cat-nav
 			height: 55px
 			line-height: 55px
+			+r(980)
+				height: 140px
+				line-height: 1
 		.cat-nav__img,
 		.cat-nav__text
 			display: none
+			+r(980)
+				display: block
 		.cat-nav__title
 			display: inline-block
 			margin-bottom: 0
@@ -743,6 +748,7 @@ a
 		top: 100%
 		left: -271px
 		right: -20px
+		border-bottom: 1px solid #565656 
 		padding: 10px 10px 10px 20px 
 		opacity: 0
 		visibility: hidden
