@@ -951,6 +951,7 @@ a {
   text-align-last: justify;
   z-index: 10;
   clear: both;
+  text-align: left;
 }
 .nav:after {
   content: "";
@@ -2795,7 +2796,7 @@ a {
 .main-slider {
   position: relative;
   z-index: 1;
-  margin-top: -148px;
+  top: -148px;
   min-height: 525px;
   overflow: hidden;
   max-height: 744px;
@@ -2803,7 +2804,7 @@ a {
 }
 @media only screen and (max-width: 980px) {
   .main-slider {
-    margin: 0;
+    top: 0;
     height: 525px;
   }
 }
@@ -2901,7 +2902,7 @@ a {
   z-index: 2;
   *zoom: 1;
   font-size: 14px;
-  margin-top: -230px;
+  margin-top: -378px;
   height: 40px;
   line-height: 40px;
 }
@@ -5133,6 +5134,11 @@ a {
   color: red;
   font-size: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .prod__del .icon {
+    right: -5px;
+  }
+}
 
 .prod_view {
   white-space: normal;
@@ -5834,5 +5840,6 @@ a {
 }
 .popup.to-center .btn {
   width: 156px;
+  margin-bottom: 10px;
   text-align: center;
 }
