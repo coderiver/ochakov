@@ -604,7 +604,7 @@ a {
   color: black;
   font-family: "proxima-nova-condensed-semibold";
 }
-.ie11 .header__contacts strong {
+.ie .header__contacts strong {
   font-family: Arial, sans-serif;
 }
 @media only screen and (max-width: 980px) {
@@ -753,7 +753,7 @@ a {
   color: black;
   font-family: "proxima-nova-condensed-semibold";
 }
-.ie11 .info-item__link span {
+.ie .info-item__link span {
   font-family: Arial, sans-serif;
 }
 .info-item__link i {
@@ -837,7 +837,7 @@ a {
   font-size: 16px;
   font-family: "proxima-nova-condensed-semibold";
 }
-.ie11 .cart-drop__price {
+.ie .cart-drop__price {
   font-family: Arial, sans-serif;
 }
 .cart-drop__price:before {
@@ -1031,7 +1031,7 @@ a {
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
 }
-.ie11 .nav__item a {
+.ie .nav__item a {
   font-family: Arial, sans-serif;
 }
 @media only screen and (max-width: 980px) {
@@ -1313,7 +1313,7 @@ a {
   font-family: "proxima-nova-condensed-semibold";
   opacity: 1;
 }
-.ie11 .footer__nav li:first-child a {
+.ie .footer__nav li:first-child a {
   font-family: Arial, sans-serif;
 }
 .footer__nav a {
@@ -1382,7 +1382,7 @@ a {
   -webkit-transition: border 0.4s;
   transition: border 0.4s;
 }
-.ie11 .footer__search input {
+.ie .footer__search input {
   font-family: Arial, sans-serif;
 }
 .footer__search input:hover {
@@ -1840,7 +1840,7 @@ a {
   color: black;
   font-family: "proxima-nova-condensed-semibold";
 }
-.ie11 .field-separator {
+.ie .field-separator {
   font-family: Arial, sans-serif;
 }
 
@@ -1975,7 +1975,7 @@ a {
   -ms-user-select: none;
   user-select: none;
 }
-.ie11 .drop-list__text {
+.ie .drop-list__text {
   font-family: Arial, sans-serif;
 }
 .drop-list__text:after {
@@ -2016,7 +2016,7 @@ a {
   will-change: opacity;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-.ie11 .drop-list__main {
+.ie .drop-list__main {
   font-family: Arial, sans-serif;
 }
 .drop-list__main li {
@@ -2406,7 +2406,7 @@ a {
   font-family: "proxima-nova-condensed-semibold";
   border-bottom: 2px dotted #c2daeb;
 }
-.ie11 .tabs a {
+.ie .tabs a {
   font-family: Arial, sans-serif;
 }
 .tabs a:hover {
@@ -2644,7 +2644,7 @@ a {
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
 }
-.ie11 .item__title {
+.ie .item__title {
   font-family: Arial, sans-serif;
 }
 .item__title:hover {
@@ -2700,7 +2700,7 @@ a {
   line-height: 1;
   border-radius: 4px;
 }
-.ie11 .badge {
+.ie .badge {
   font-family: Arial, sans-serif;
 }
 .badge.is-new {
@@ -3576,7 +3576,7 @@ a {
   font-family: "proxima-nova-condensed-semibold";
   line-height: 1;
 }
-.ie11 .cat-nav__title {
+.ie .cat-nav__title {
   font-family: Arial, sans-serif;
 }
 @media only screen and (max-width: 980px) {
@@ -3825,7 +3825,7 @@ a {
   color: white;
   font-family: "proxima-nova-condensed-semibold";
 }
-.ie11 .post-item__title {
+.ie .post-item__title {
   font-family: Arial, sans-serif;
 }
 .post-item__text {
@@ -3854,7 +3854,7 @@ a {
   font-family: "proxima-nova-condensed-semibold";
   color: #666666;
 }
-.ie11 .clients__title {
+.ie .clients__title {
   font-family: Arial, sans-serif;
 }
 @media only screen and (max-width: 980px) {
@@ -3960,7 +3960,7 @@ a {
   color: #333333;
   font-family: "proxima-nova-condensed-semibold";
 }
-.ie11 .sidebar__title {
+.ie .sidebar__title {
   font-family: Arial, sans-serif;
 }
 .sidebar__title.is-mod {
@@ -4365,7 +4365,7 @@ a {
   font-size: 14px;
   font-family: "proxima-nova-condensed-semibold";
 }
-.ie11 .article ol li:before {
+.ie .article ol li:before {
   font-family: Arial, sans-serif;
 }
 .article ol li ol {
@@ -4667,7 +4667,7 @@ a {
   font-family: "proxima-nova-condensed-semibold";
   line-height: 1.05;
 }
-.ie11 .form-info__title {
+.ie .form-info__title {
   font-family: Arial, sans-serif;
 }
 @media only screen and (max-width: 900px) {
@@ -4829,7 +4829,7 @@ a {
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
 }
-.ie11 .post__title {
+.ie .post__title {
   font-family: Arial, sans-serif;
 }
 .post__title:hover {
@@ -5170,7 +5170,7 @@ a {
   color: black;
   font-family: "proxima-nova-condensed-semibold";
 }
-.ie11 .prod__title {
+.ie .prod__title {
   font-family: Arial, sans-serif;
 }
 .prod__meta {
@@ -5244,7 +5244,7 @@ a {
   font-size: 16px;
   font-family: "proxima-nova-condensed-semibold";
 }
-.ie11 .prod-row__title {
+.ie .prod-row__title {
   font-family: Arial, sans-serif;
 }
 
@@ -5538,7 +5538,7 @@ a {
   font-family: "proxima-nova-condensed-semibold";
   font-size: 16px;
 }
-.ie11 .prod-slider__title {
+.ie .prod-slider__title {
   font-family: Arial, sans-serif;
 }
 .prod-slider__main {
@@ -5837,7 +5837,7 @@ a {
   font-family: "proxima-nova-condensed-semibold";
   color: #333333;
 }
-.ie11 .popup__title {
+.ie .popup__title {
   font-family: Arial, sans-serif;
 }
 .popup__btn {
@@ -5881,7 +5881,7 @@ a {
   color: #007abc;
   font-family: "proxima-nova-condensed-semibold";
 }
-.ie11 .popup__subtitle {
+.ie .popup__subtitle {
   font-family: Arial, sans-serif;
 }
 .popup__text {
